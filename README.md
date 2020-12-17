@@ -1,7 +1,38 @@
-# Memeland
-Social media app
 
-https://memeland-matiasfunes.herokuapp.com/
+# Memeland
+
+## Introduction
+
+As a big fan of memes when I finished my Bootcamp I decided to apply my knowledge to create my own social media app and here is Memeland!
+
+## Link to the app
+## https://memeland-matiasfunes.herokuapp.com/
+
+![visitors](https://visitor-badge.glitch.me/badge?page_id=MatiasFunes94.Memeland)
+
+## Stack of Technologies
+
+### Front End:
+HTML, CSS, Javascript, React, Material-ui, Redux.
+
+### Back End:
+Node.js, Express, mongoose
+
+### Database:
+MongoDB, Mongo Atlas
+
+## **Starting Instructions** 
+
+## Run the roject
+
+Clone the project to a folder in your PC
+
+- Open the project console
+    and in the root of the folder run the command line, `npm install` after finished it run `npm run dev`
+        
+-  Inside `client` folder, run the command line, `npm install` after finished it run `npm start` (go to http://localhost:3000/). 
+
+# Project Screens 
 
 ## Landing page
 ![image](https://user-images.githubusercontent.com/66705822/102547455-06e7e700-4098-11eb-996f-3abd43aa62bd.png)
