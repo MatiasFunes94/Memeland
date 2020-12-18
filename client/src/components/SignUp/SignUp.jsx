@@ -60,7 +60,7 @@ export default function SignUp() {
   const body = (
     <Container style={modalStyle} className={classes.paper}>
       <div>
-        <h3 className={classes.signup}>Sign up</h3>
+        <h3 className={classes.signup}>Register</h3>
         {errorsData.id === "REGISTER_FAIL" &&
           errorsData.msg.errors.map((ele, id) => (
             <div key={id} style={{marginTop: '10px'}}>
@@ -69,7 +69,6 @@ export default function SignUp() {
           ))}
         <form className={classes.root} noValidate autoComplete="off">
           <TextField
-            required
             id="standard-required"
             label="Username"
             style={{ width: "95%", borderBottom: "2px white solid" }}
@@ -84,7 +83,6 @@ export default function SignUp() {
             }}
           />
           <TextField
-            required
             id="standard-required"
             label="Email"
             style={{ width: "95%", borderBottom: "2px white solid" }}
@@ -127,7 +125,7 @@ export default function SignUp() {
   return (
     <div>
       <Button type="button" className={classes.button} onClick={handleOpen}>
-        Sign Up
+        Register
       </Button>
       <Modal
         open={open}

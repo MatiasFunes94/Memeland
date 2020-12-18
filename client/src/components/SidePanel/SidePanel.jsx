@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Button from "@material-ui/core/Button";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import { Redirect } from "react-router-dom";
-import { getAllPosts, getAllRecentsPosts, getAllFollowingPosts, getAllMyFavoritePosts } from '../../redux/PostReducer/PostActions';
+import { getAllPosts, getAllRecentsPosts, getAllFollowingPosts, getAllMyFavoritePosts, setFilterPosts } from '../../redux/PostReducer/PostActions';
 import { Container } from "@material-ui/core";
 import { useStyles } from './styles';
 
@@ -20,22 +20,22 @@ function SidePanel() {
 
   const handleGetAllPosts = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-    dispatch(getAllPosts())
+    dispatch(getAllPosts()).then(dispatch(setFilterPosts("Most liked posts")))
   }
 
   const handleGetAllRecentsPosts = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-    dispatch(getAllRecentsPosts())
+    dispatch(getAllRecentsPosts()).then(dispatch(setFilterPosts("Recents posts")))
   }
 
   const handleGetAllFollowingPosts = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-    dispatch(getAllFollowingPosts(user.following))
+    dispatch(getAllFollowingPosts(user.following)).then(dispatch(setFilterPosts("Following posts")))
   }
 
   const handleGetAllMyFavoritePosts = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-    dispatch(getAllMyFavoritePosts())
+    dispatch(getAllMyFavoritePosts()).then(dispatch(setFilterPosts("My favorite posts")))
   }
 
   const handleGetAllMyPosts = () => {

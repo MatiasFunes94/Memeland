@@ -9,8 +9,8 @@ import Menu from '@material-ui/core/Menu';
 import MenuIcon from '@material-ui/icons/Menu';
 import Button from '@material-ui/core/Button';
 import Logout from '../Logout/Logout';
-import SignIn from '../SignIn/SignIn';
-import SignUp from '../SignUp/SignUp';
+import Login from '../SignIn/SignIn';
+import Register from '../SignUp/SignUp';
 import FilterSection from '../FilterSection/FilterSection';
 import { palette } from "../../ColourPalette";
 import { useStyles } from './styles';
@@ -100,10 +100,10 @@ export default function Navbar() {
       ) : (
         <div>
           <MenuItem>
-            <SignIn />
+            <Login />
           </MenuItem>
           <MenuItem>
-            <SignUp />
+            <Register />
           </MenuItem>
         </div>
       )}
@@ -175,7 +175,7 @@ export default function Navbar() {
                     aria-haspopup="true"
                     color="inherit"
                   >
-                    <SignIn />
+                    <Login />
                   </Button>
                 </div>
                 <div>
@@ -186,7 +186,7 @@ export default function Navbar() {
                     aria-haspopup="true"
                     color="inherit"
                   >
-                    <SignUp />
+                    <Register />
                   </Button>
                 </div>
               </div>

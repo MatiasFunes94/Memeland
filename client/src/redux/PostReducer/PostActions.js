@@ -102,7 +102,6 @@ export const updatePost = (postId, description) => async (dispatch, getState) =>
     config.headers["Authorization"] = token;
   }
   const editedDescription = JSON.stringify({ description })
-  console.log(description)
   const post = await axios.put(`/api/posts/${postId}`, editedDescription, config);
   dispatch({ type: UPDATE_POST, payload: post.data });
 };

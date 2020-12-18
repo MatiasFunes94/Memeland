@@ -61,7 +61,7 @@ export default function SignIn() {
   const body = (
     <Container style={modalStyle} className={classes.paper}>
       <div>
-        <h3 className={classes.signin}>Sign in</h3>
+        <h3 className={classes.signin}>Login</h3>
         {errorsData.id === "LOGIN_FAIL" &&
           errorsData.msg.errors.map((ele, id) => (
             <div key={id} style={{ marginTop: "10px" }}>
@@ -70,7 +70,6 @@ export default function SignIn() {
           ))}
         <form className={classes.root} noValidate autoComplete="off">
           <TextField
-            required
             label="Email"
             style={{ width: "95%", borderBottom: "2px white solid", color: palette.white }}
             name="email"
@@ -117,7 +116,7 @@ export default function SignIn() {
   return (
     <div>
       <Button type="button" className={classes.button} onClick={handleOpen}>
-        Sign In
+        Login
       </Button>
       <Modal
         open={open}
